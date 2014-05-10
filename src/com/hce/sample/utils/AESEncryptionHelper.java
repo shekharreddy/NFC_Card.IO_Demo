@@ -21,65 +21,49 @@ public class AESEncryptionHelper {
 	// encrypt the clearText, base64 encode the cipher text and return it.
 	public static byte[] encrypt(String clearText) {
 		SecretKeySpec keySpec = new SecretKeySpec(keyBytes, "AES");
-
-		// init cipher
 		Cipher cipher = null;
-		try {
-			cipher = Cipher.getInstance("AES");
-		} catch (NoSuchAlgorithmException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (NoSuchPaddingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		try {
-			cipher.init(Cipher.ENCRYPT_MODE, keySpec);
-		} catch (InvalidKeyException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		byte[] cipherText = null;
+
 		try {
+			// init cipher
+			cipher = Cipher.getInstance("AES");
+			cipher.init(Cipher.ENCRYPT_MODE, keySpec);
 			cipherText = cipher.doFinal(clearText.getBytes());
 		} catch (IllegalBlockSizeException  e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (BadPaddingException e) {
-			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InvalidKeyException e) {
+			e.printStackTrace();
+		} catch(NoSuchAlgorithmException e) {
+			e.printStackTrace();
+		} catch(NoSuchPaddingException e) {
 			e.printStackTrace();
 		}
 		return Base64.encode(cipherText, 10);
 	}
 
+	//Decrpyt the bytes data to clearText
 	public static String decrypt(byte[] cipherText) {
 		SecretKeySpec keySpec = new SecretKeySpec(keyBytes, "AES");
 
-		// init cipher
 		Cipher cipher = null;
-		try {
-			cipher = Cipher.getInstance("AES");
-		} catch (NoSuchPaddingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}  catch (NoSuchAlgorithmException  e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		try {
-			cipher.init(Cipher.DECRYPT_MODE, keySpec);
-		} catch (InvalidKeyException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		byte[] clearText = null;
+
 		try {
+			// init cipher
+			cipher = Cipher.getInstance("AES");		
+			cipher.init(Cipher.DECRYPT_MODE, keySpec);
 			clearText = cipher.doFinal(Base64.decode(new String(cipherText), 10));
 		} catch (IllegalBlockSizeException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (BadPaddingException e) {
-			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NoSuchPaddingException e) {
+			e.printStackTrace();
+		} catch (NoSuchAlgorithmException  e) {
+			e.printStackTrace();
+		} catch (InvalidKeyException e) {// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
