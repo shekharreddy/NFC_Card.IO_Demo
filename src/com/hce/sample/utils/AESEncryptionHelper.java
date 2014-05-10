@@ -43,7 +43,7 @@ public class AESEncryptionHelper {
 		return Base64.encode(cipherText, 10);
 	}
 
-	//Decrpyt the bytes data to clearText
+	//Decrpyt the bytes data to clearText..
 	public static String decrypt(byte[] cipherText) {
 		SecretKeySpec keySpec = new SecretKeySpec(keyBytes, "AES");
 
