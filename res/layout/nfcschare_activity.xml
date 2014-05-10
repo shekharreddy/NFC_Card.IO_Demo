@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/card_details"
+        style="@style/TextStyle"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="top"
+        android:paddingTop="30dp" />
+
+    <TextView
+        android:id="@+id/nfc_note"
+        style="@style/TextStyle"
+        android:layout_centerInParent="true"
+        android:drawablePadding="15dp"
+        android:drawableTop="@drawable/nfc_logo"
+        android:gravity="center_horizontal"
+        android:text="@string/transfer_cc_details" />
+
+</RelativeLayout>

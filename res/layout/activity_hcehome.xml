@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.nsr.app.hcedemo.HCEDemo$PlaceholderFragment" >
+
+    <TextView
+        android:id="@+id/welcome"
+        style="@style/TextStyle"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="@string/welcome" />
+
+    <TextView
+        android:id="@+id/card_details"
+        style="@style/TextStyle"
+        android:layout_below="@+id/welcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/red_state" />
+
+    <Button
+        android:id="@+id/scan_card"
+        style="@style/ButtonStyle"
+        android:layout_centerInParent="true"
+        android:onClick="onScanPress"
+        android:text="@string/scan_cc_card" />
+
+    <Button
+        android:id="@+id/nfc_share"
+        style="@style/ButtonStyle"
+        android:layout_below="@+id/scan_card"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:onClick="onNFCPress"
+        android:text="@string/share_nfc" />
+
+    <TextView
+        android:id="@+id/nfc_not_supported"
+        style="@style/TextStyle"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:text="@string/no_nfc"
+        android:textColor="@color/red_state"
+        android:visibility="gone" />
+
+</RelativeLayout>

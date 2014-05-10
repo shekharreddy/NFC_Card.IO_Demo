@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HCE Demo</string>
+    <string name="welcome">Welcome to Credit Card scan and Exchange via NFC.</string>
+    <string name="action_info">Info</string>
+    <string name="scan_cc_card">Scan Your Credit Card</string>
+    <string name="share_nfc">Exchange via NFC</string>
+    <string name="no_nfc">NFC feature not found on your device, you can\'t Exchange via NFC.</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="alert">Alert</string>
+    <string name="settings">Settings</string>
+    <string name="get_nfc_details">Do you want to receive Credit Card details via NFC ?</string>
+    <string name="transfer_cc_details">Tap a device to transfer/receive Credit Card details.</string>
+    <string name="enable_nfc_msg">Please go to Settings and enable NFC to use this feature</string>
+
+</resources>
