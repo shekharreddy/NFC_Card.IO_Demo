@@ -26,7 +26,10 @@ public class AESEncryptionHelper {
 		Cipher cipher = null;
 		try {
 			cipher = Cipher.getInstance("AES");
-		} catch (NoSuchAlgorithmException | NoSuchPaddingException e) {
+		} catch (NoSuchAlgorithmException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NoSuchPaddingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -39,7 +42,10 @@ public class AESEncryptionHelper {
 		byte[] cipherText = null;
 		try {
 			cipherText = cipher.doFinal(clearText.getBytes());
-		} catch (IllegalBlockSizeException | BadPaddingException e) {
+		} catch (IllegalBlockSizeException  e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (BadPaddingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -53,7 +59,10 @@ public class AESEncryptionHelper {
 		Cipher cipher = null;
 		try {
 			cipher = Cipher.getInstance("AES");
-		} catch (NoSuchAlgorithmException | NoSuchPaddingException e) {
+		} catch (NoSuchPaddingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}  catch (NoSuchAlgorithmException  e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
