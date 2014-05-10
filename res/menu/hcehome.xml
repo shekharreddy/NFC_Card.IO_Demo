@@ -4,7 +4,7 @@
     tools:context="com.hce.sample.HCEHomeActivity" >
 
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_info"
         android:icon="@drawable/ic_actionbar_information"
         android:title="@string/action_info"
         app:showAsAction="always"/>

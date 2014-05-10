@@ -14,5 +14,8 @@
     <string name="get_nfc_details">Do you want to receive Credit Card details via NFC ?</string>
     <string name="transfer_cc_details">Tap a device to transfer/receive Credit Card details.</string>
     <string name="enable_nfc_msg">Please go to Settings and enable NFC to use this feature</string>
+    
+    <string name="info">Welcome to Credit Card scan and Exchange via NFC. \n\nHow to use.. \n1. Click on "Scan Your Credit Card" to scan your credit card. \n2. Click on
+        "Exchange via NFC" on both the device and tap to transfer Credit Card details.</string>
 
 </resources>
